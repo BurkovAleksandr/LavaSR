@@ -109,6 +109,10 @@ sf.write('input.wav', input_audio.cpu().numpy().squeeze(), 16000)
 sf.write('output.wav', output_audio, 48000)
 ```
 
+## Community
+- [ComfyUI node](https://github.com/marduk191/ComfyUI-LavaSR): Code to use LavaSR in comfyui.
+- [GUI App](https://github.com/faxlab/LavaSR-Fast-Enhancer): GUI app for LavaSR
+  
 ## Info
 
 Q: How is this novel?
