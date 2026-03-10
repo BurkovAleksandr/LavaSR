@@ -111,8 +111,12 @@ sf.write('output.wav', output_audio, 48000)
 
 ## Community
 - [ComfyUI node](https://github.com/marduk191/ComfyUI-LavaSR): Code to use LavaSR in comfyui.
-- [GUI App](https://github.com/faxlab/LavaSR-Fast-Enhancer): GUI app for LavaSR
-  
+- [GUI App](https://github.com/faxlab/LavaSR-Fast-Enhancer): GUI app for LavaSR.
+- [C++ implementation](https://github.com/Topping1/LavaSRcpp): Purely C++ implementation for LavaSR.
+- [Onnx implementation](https://github.com/Topping1/LavaSR-ONNX): Clean and simple Onnx implementation for LavaSR(
+
+Thanks to the community for building on top of the model!
+
 ## Info
 
 Q: How is this novel?
@@ -121,7 +125,7 @@ A: It adapts Vocos based architecture for BWE(bandwidth extension/audio upsampli
 
 Q: How is it so fast?
 
-A: Because it uses the Vocos architecture which is isotropic and single pass, it's much faster then time-domain based and diffusion based models.
+A: Because it uses the Vocos architecture which is isotropic and single pass, it's much faster then time-domain based and diffusion based models. Vocos scales incredibly well as well.
 
 Q: What is it trained on?
 
