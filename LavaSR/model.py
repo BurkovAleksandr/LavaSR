@@ -136,10 +136,7 @@ class LavaEnhance:
 class LavaEnhance2(LavaEnhance):
     def __init__(self, model_path="YatharthS/LavaSR", device="cpu"):
 
-        if model_path == "YatharthS/LavaSR":
-            from huggingface_hub import snapshot_download
-
-            model_path = snapshot_download(model_path)
+        model_path = resolve_model_path(model_path)
 
         self.device = device
         self.bwe_model = LavaBWE(f"{model_path}/enhancer_v2", device=device)
