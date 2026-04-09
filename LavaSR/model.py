@@ -89,7 +89,7 @@ class LavaEnhance:
     def __init__(self, model_path="YatharthS/LavaSR", device="cpu"):
 
         model_path = resolve_model_path(model_path)
-
+        print("RESULT MODEL PATH: ", model_path)
         self.device = device
         self.bwe_model = LavaBWE(
             f"{model_path}/enhancer", device=device
