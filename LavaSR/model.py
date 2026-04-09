@@ -72,14 +72,14 @@ def resolve_model_path(model_id: str) -> str:
         path = resolve_snapshot_path(model_id)
         if os.path.isdir(path):
             return path
-    except Exception:
-        pass
+    except Exception as exc:
+        print(exc)
 
     # --- 4. HF cache без сети ---
     try:
         return snapshot_download(model_id, local_files_only=True)
-    except Exception:
-        pass
+    except Exception as exc:
+        print(exc)
 
     # --- 5. fallback: скачать ---
     return snapshot_download(model_id)
